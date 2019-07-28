@@ -1,5 +1,3 @@
-server:
-  port: 6913  #服务端口号
 spring:
   application:
     name: zlm-app-emp
