@@ -67,5 +67,6 @@ management:
   endpoint:
     health:
       show-details: always
-
+env:
+  dev
 
