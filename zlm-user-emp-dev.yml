@@ -9,7 +9,6 @@ spring:
   #redis
   redis:
     host: 47.100.108.108
-    #    host: 119.3.19.168
     port: 16379
     password: admin123
     database: 0
