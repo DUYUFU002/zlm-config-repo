@@ -1,16 +1,4 @@
 spring:
-#   application:
-#     name: zlm-app-emp
-#   profiles:
-#     active: dev
-#   cloud:
-#     client:
-#       ipAddress: 127.0.0.1 #本地
-#     config:
-#       discovery:
-#         enabled: true
-#         service-id: ZLM-CONFIG
-#       profile: dev
   zipkin:
     #    base-url: http://10.102.24.128:9411/
     base-url: http://47.100.108.108:9411/
@@ -19,15 +7,6 @@ spring:
         probability: 1 #样本采集量，默认为0.1，为了测试这里修改为1，正式环境一般使用默认值。
     sender:
       type: web
-# eureka:
-#   client:
-#     serviceUrl: #注册中心的注册地址
-#       defaultZone: http://127.0.0.1:6901/eureka/
-#   #      defaultZone: http://10.102.24.128:6901/eureka/  #测试
-#   #      defaultZone: http://119.3.19.168:6901/eureka/   #线上
-#   instance:
-#     prefer-ip-address: true
-#     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
 management:
   endpoint:
     health:
