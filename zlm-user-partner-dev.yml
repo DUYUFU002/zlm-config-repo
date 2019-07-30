@@ -1,1 +1,49 @@
+spring:
+  zipkin:
+    base-url: http://10.102.24.128:9411/
+    sleuth:
+      sampler:
+        probability: 1 #样本采集量，默认为0.1，为了测试这里修改为1，正式环境一般使用默认值。
+    sender:
+      type: web
+  redis:
+    host: 10.102.24.128
+    #    host: 119.3.19.168
+    port: 16379
+    password: admin123
+    database: 0
+    timeout: 10000 # 连接超时时间（毫秒）
+    lettuce:
+      pool:
+        max-active: 8 # 连接池最大连接数（使用负值表示没有限制）默认 8
+        max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）默认 -1
+        max-idle: 8 # 连接池中的最大空闲连接默认 8
+        min-idle: 0 # 连接池中的最小空闲连接默认 0
+  rabbitmq:
+    addresses: 10.102.24.128:5672
+    username: admin
+    password: admin
+#datasource config
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://119.3.19.168:3306/zhaolemo_test?zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&tinyInt1isBit=false&serverTimezone=Asia/Shanghai
+  username: zhaolemo_test
+  password: Longda@zhaolemo_123
 
+#mybatis config
+mybatis:
+  typeAliasesPackage: com.zlm.user.partner.entity
+  mapperLocations: classpath*:mapper/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
+
+logging:
+  path: /home/zlm-user-partner-logs
+  config: classpath:logback-dev.xml
+
+management:
+  endpoint:
+    health:
+      show-details: always
+env:
+  dev
