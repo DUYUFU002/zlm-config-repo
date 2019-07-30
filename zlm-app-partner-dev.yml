@@ -42,3 +42,5 @@ ribbon:
 logging:
   path: /home/zlm-app-partner-logs
   config: classpath:logback-dev.xml
+env:
+  dev
