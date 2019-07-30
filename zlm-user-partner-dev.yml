@@ -1,14 +1,13 @@
 spring:
   zipkin:
-    base-url: http://10.102.24.128:9411/
+    base-url: http://47.100.108.108:9411/
     sleuth:
       sampler:
         probability: 1 #样本采集量，默认为0.1，为了测试这里修改为1，正式环境一般使用默认值。
     sender:
       type: web
   redis:
-    host: 10.102.24.128
-    #    host: 119.3.19.168
+    host: 47.100.108.108
     port: 16379
     password: admin123
     database: 0
@@ -20,7 +19,7 @@ spring:
         max-idle: 8 # 连接池中的最大空闲连接默认 8
         min-idle: 0 # 连接池中的最小空闲连接默认 0
   rabbitmq:
-    addresses: 10.102.24.128:5672
+    addresses: 47.100.108.108:5672
     username: admin
     password: admin
 #datasource config
