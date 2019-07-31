@@ -28,4 +28,4 @@ logging:
   path: /home/zlm-app-emp-logs
   config: classpath:logback-dev.xml
 env:
-  dev
+  test
