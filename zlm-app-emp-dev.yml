@@ -6,6 +6,10 @@ spring:
         probability: 1 #样本采集量，默认为0.1，为了测试这里修改为1，正式环境一般使用默认值。
     sender:
       type: web
+  rabbitmq:
+    addresses: 47.100.108.108:5672
+    username: admin
+    password: admin
 management:
   endpoint:
     health:
@@ -24,4 +28,4 @@ logging:
   path: /home/zlm-app-emp-logs
   config: classpath:logback-dev.xml
 env:
-  test
+  dev
